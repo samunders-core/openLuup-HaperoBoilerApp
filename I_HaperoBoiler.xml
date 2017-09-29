@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<implementation>
+    <files>I_HaperoBoiler.lua</files>
+    <startup>hbStartup</startup>
+</implementation>
