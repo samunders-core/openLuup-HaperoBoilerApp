@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<root xmlns="urn:schemas-upnp-org:device-1-0">
+  <specVersion>
+    <major>1</major>
+    <minor>0</minor>
+  </specVersion>
+  <device>
+    <deviceType>HaperoBoiler</deviceType>
+    <friendlyName>Hapero Boiler</friendlyName>
+    <manufacturer>Hapero</manufacturer>
+    <manufacturerURL></manufacturerURL>
+    <modelDescription>Hapero Boiler for openLuup</modelDescription>
+    <modelName>v0.1</modelName>
+    <modelNumber>1</modelNumber>
+    <handleChildren>1</handleChildren>
+    <Category_Num>1</Category_Num>
+    <UDN></UDN>
+    <serviceList>
+      <service>
+        <serviceType>urn:hapero-at:service:HaperoBoiler:1</serviceType>
+        <serviceId>urn:hapero-at:serviceId:HaperoBoiler1</serviceId>
+        <SCPDURL>S_HaperoBoiler.xml</SCPDURL>
+      </service>
+    </serviceList>
+    <!-- <staticJson>D_HaperoBoiler.json</staticJson> -->
+    <implementationList>
+      <implementationFile>I_HaperoBoiler.xml</implementationFile>
+    </implementationList>
+  </device>
+</root>
