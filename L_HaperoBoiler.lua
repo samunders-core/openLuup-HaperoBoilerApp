@@ -1,3 +1,7 @@
+-- uncomment next lines when using in 'Lua Code Test'
+-- module("L_HaperoBoiler", package.seeall)
+-- require("L_HaperoBoilerLcd")
+
 ABOUT = {
   NAME          = "Hapero",
   VERSION       = "2017.09.29",
@@ -101,9 +105,9 @@ function pollHapero(d)
   local valid, data, name = command(cmd)	-- expecting 07B 8 DE 00 00 00 00 00 FF 00
   if valid then
     luup.call_delay("pollHapero", 30, nil)    -- state changes 1/min tops
-    local expected = "07B 8 DE "
-    if string.sub(data, 1, string.len(expected)) == expected then
-      log(data)
+    local bytes, removed = string.gsub(data, "(07B 8 DE )", "")
+    if 1 == removed then
+      log(data .. " = " .. decoDE4bytes(string.sub(bytes, 1, 12)))
     else
       log("protocol mismatch: '" .. data .. "' received as response for '" .. cmd .. "'")
     end

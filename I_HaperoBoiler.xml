@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <implementation>
   <!-- <protocol>cr</protocol> commented as openLuup uses only that in D_*xml -->
-  <files>L_HaperoBoiler.lua</files>
+  <files>L_HaperoBoiler.lua;L_HaperoBoilerLcd.lua</files>
   <startup>pollHapero</startup>
   <incoming>
     <lua>if (p ~= nil) then p.received(lul_data) end</lua>
